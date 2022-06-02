@@ -1,0 +1,36 @@
+CREATE DATABASE Chat;
+
+USE Chat;
+
+CREATE TABLE user(
+id BIGINT PRIMARY KEY AUTO_INCREMENT NOT null,
+name VARCHAR(255) NOT NULL,
+picture VARCHAR(255) NOT NULL,
+number BIGINT,
+password VARCHAR(255)
+);
+
+CREATE TABLE contact(
+id BIGINT PRIMARY key AUTO_INCREMENT NOT null,
+name VARCHAR(255),
+number BIGINT NOT null 
+);
+
+
+CREATE TABLE message(
+id BIGINT PRIMARY KEY AUTO_INCREMENT NOT null,
+text TEXT,
+user_id BIGINT NOT NULL, 
+contact_id BIGINT NOT NULL,
+FOREIGN KEY (user_id) REFERENCES user(id),
+FOREIGN KEY (contact_id) REFERENCES contact(id)
+
+);
+
+CREATE TABLE user_contact(
+id BIGINT PRIMARY KEY auto_increment,
+user_id BIGINT NOT null,
+contact_id BIGINT NOT NULL,
+FOREIGN KEY(user_id) REFERENCES user(id),
+FOREIGN KEY(contact_id) REFERENCES contact(id)
+);
