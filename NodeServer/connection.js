@@ -5,7 +5,11 @@ import mysql from 'mysql2/promise'
 const config = {
   host: "localhost",
   user: "user",
+<<<<<<< HEAD
   password: "password",
+=======
+  password: "password",
+>>>>>>> ff39113886dfaf5bbc1544849c1201528c3383e0
   database: "database",
   Promise: bluebird
 };
