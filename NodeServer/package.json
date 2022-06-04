@@ -1,5 +1,6 @@
 {
   "name": "coxixo",
+  "type": "module",
   "version": "1.0.0",
   "description": "web service do app coxixo",
   "main": "index.js",
@@ -7,5 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "quimmedes",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "express": "^4.18.1",
+    "mysql": "github:mysqljs/mysql",
+    "mysql2": "^2.3.3"
+  }
 }
